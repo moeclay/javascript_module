@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Module JS</title>
+</head>
+<body>
+<p id="idC"></p>
+<div id="myDiv"></div>
+<script type="module">
+	import { Student } from './models/student.js';
+
+	window.onload = function(){
+		var x = new Student();
+		x.course.id = 1;
+		x.course.name = 'Harry Potter';
+		document.getElementById('idC').innerHTML = x.course.id;
+		document.getElementById('myDiv').innerHTML = x.course.name;
+	}
+</script>
+</body>
+</html>
